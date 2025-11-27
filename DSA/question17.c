@@ -1,9 +1,16 @@
+// Q17: Write a program to find the second largest number from a given list of input numbers.
+
 #include<stdio.h>
 #include <limits.h>
 
 int main(){
 
-    int n[] = {32,32,5,12,-65};
+    int n[5] = {0};
+    printf("Enter 5 numbers: ");
+    for (int i = 0; i < 5; i++){
+        scanf("%d",&n[i]);
+    }
+    
     int lar = n[0];
     int secLar = INT_MIN;
 
@@ -19,6 +26,6 @@ int main(){
         }
     }
     if(secLar == INT_MIN) printf("There is no largest");
-    else printf("%d",secLar);
+    else printf("Second largest element in inpur numbers: %d",secLar);
     return 0;
 }

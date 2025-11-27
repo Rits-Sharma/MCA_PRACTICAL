@@ -1,3 +1,5 @@
+//  Q15: Write a program to generate Pascal’s Triangle.
+
 #include<stdio.h>
 
 int factorial(int num){

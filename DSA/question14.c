@@ -1,3 +1,5 @@
+//  Q14: Write a C program to check whether a given string is a palindrome or not.
+
 #include<stdio.h>
 
 int main(){

@@ -1,3 +1,5 @@
+// Q11: Write a C program to print the Fibonacci series up to N terms using recursion.
+
 #include <stdio.h>
 
 // Function to compute the nth Fibonacci number
@@ -15,10 +17,10 @@ int main() {
     printf("Enter how many Fibonacci numbers to print: ");
     scanf("%d", &n);
 
-    printf("Fibonacci Series:\n");
-
+    printf("Fibonacci Series: ");
+    // using recursion -->
     for (int i = 0; i < n; i++) {
-        printf("%d\t", fibo(i));
+        printf("%d ", fibo(i));
     }
 
     printf("\n");
