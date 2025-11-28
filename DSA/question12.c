@@ -8,10 +8,16 @@ void isPrime(int n){
         printf("Not prime\n");
         return;
     }
-    for (int i = 2; i <= (n/2); i++)
-    {
-        if (n % i == 0)
-        {
+    // for (int i = 2; i <= (n/2); i++)
+    // {
+    //     if (n % i == 0)
+    //     {
+    //         printf("Not prime\n");
+    //         return;
+    //     }
+    // }
+    for (int i = 2; i * i <= n; i++) {   // more efficient condition
+        if (n % i == 0) {
             printf("Not prime\n");
             return;
         }

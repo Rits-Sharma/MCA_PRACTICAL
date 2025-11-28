@@ -12,12 +12,12 @@ public class Question1 {
             System.out.print(("Enter two numbers: "));
             a = sc.nextInt();
             b = sc.nextInt();
-            System.out.println(a + " divided by " + b + " then " + (a / b));
+            System.out.println(a + " is divided by " + b + " then " + (a / b));
             
         } catch (ArithmeticException e) {
-            System.out.println(e);
+            System.out.println("Can't " + e.getMessage());
         } catch (InputMismatchException e) {
-            System.out.println(e);
+            System.out.println("Invalid input. Please enter integers only.");
         } finally {
             sc.close();
         }

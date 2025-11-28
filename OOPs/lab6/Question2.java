@@ -11,18 +11,23 @@ class InvalidAgeException extends Exception {
 
 
 public class Question2{
+    
+    public static int getAge(Scanner sc) throws InvalidAgeException {
+        int age;  
+        System.out.print("Enter your age: ");
+        age = sc.nextInt();
+        if (age < 0 || age > 150) {
+            throw new InvalidAgeException("Age " + age + " is not between 0 and 150");
+        }
+        return age;
+    }
+    
     public static void main(String[] args) throws InvalidAgeException{
-        Scanner sc = new Scanner(System.in);
-        int age;
+        Scanner sc = new Scanner(System.in); 
 
         try {
-            System.out.print("Enter your age betwwn 0 and 150: ");
-            age = sc.nextInt();
-            if (age < 0 || age > 150) {
-                throw new InvalidAgeException("Age " + age + " is not between 0 and 150");
-            } else {
-                System.out.println("Your age is " + age);
-            }
+            int age = getAge(sc);
+            System.out.println("Your age is: " + age);
         } catch (InvalidAgeException e) {
             System.out.println(e.getMessage());
         } finally {

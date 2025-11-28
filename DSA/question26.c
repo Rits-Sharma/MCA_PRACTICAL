@@ -73,7 +73,7 @@ void displayNode() {
     {
         if (temp!=NULL) {
             if (temp->prev==NULL) {
-                printf("%d -> NULL", temp->data);
+                printf("%d -> NULL\n", temp->data);
             } else {
                 printf("%d -> ", temp->data);
             }

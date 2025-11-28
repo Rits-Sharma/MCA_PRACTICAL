@@ -28,13 +28,15 @@ class AccountLockedException extends Exception {
 
 
 class BankAccount {
-    static int balance = 1000;
+    int balance = 1000;
     static Scanner sc = new Scanner(System.in);
+    boolean isLockedAcc = false;
 
-    public static int deposit () throws InvalidAmountException {
+    public int deposit () throws InvalidAmountException, AccountLockedException {
         int amt;
         System.out.print("Enter balance to deposit: ");
         amt = sc.nextInt();
+        if(isLockedAcc) throw new AccountLockedException("Your account is locked, Can't do transaction.");
         if(amt < 0) {
             throw new InvalidAmountException("Negative balance can't be deposited.");
         }
@@ -42,11 +44,11 @@ class BankAccount {
         System.out.println("Remaining balance: " + balance);
         return balance;
     }
-    public static int withdrawal () throws InsufficientFundsException, InvalidAmountException {
+    public int withdrawal () throws InsufficientFundsException, InvalidAmountException, AccountLockedException {
         int amt;
         System.out.print("Enter balance to withdraw: ");
-        Scanner sc = new Scanner(System.in);
         amt = sc.nextInt();
+        if(isLockedAcc) throw new AccountLockedException("Your account is locked, Can't do transaction.");
         if(amt > balance) {
             throw new InsufficientFundsException("Insufficient balance : Can't do withdrawal.");
         }
@@ -62,11 +64,36 @@ class BankAccount {
 public class Question10 {
     public static void main(String[] args) {
         BankAccount bA = new BankAccount();
-        try {
-            bA.withdrawal();
-            bA.deposit();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
+        while(true) {
+            int n;
+            Scanner sc = new Scanner(System.in);
+            System.out.println("1. Deposit. ");
+            System.out.println("2. Withdrawal. ");
+            System.out.println("0. Exit. ");
+            System.out.print("Enter number to do opertion: ");
+            n = sc.nextInt();
+            switch (n) {
+                case 1:
+                    try{
+                        bA.deposit();
+                    } catch (InvalidAmountException | AccountLockedException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+                
+                case 2:
+                    try{
+                        bA.withdrawal();
+                    } catch (InsufficientFundsException | InvalidAmountException | AccountLockedException e) {
+                        System.out.println(e.getMessage());
+                    }
+                    break;
+                case 0:
+                    return;
+
+                default:
+                    break;
+            }
         }
     }
 }

@@ -13,9 +13,7 @@ public class Question3 {
             for (int i = 0; i < 5; i++) {
                 arr[i] = sc.nextInt();
             }
-
             int index;
-
             System.out.println("Enter index to display element: ");
             index = sc.nextInt();
 
@@ -23,7 +21,7 @@ public class Question3 {
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println("Invalid index! Please enter a value between 0 and 4.");
         } catch (InputMismatchException e) {
-            System.out.println(e.getMessage());
+            System.out.println(e);
         } finally {
             sc.close();
         }
