@@ -13,7 +13,7 @@ int main(){
     {
         freqData[(int) str[i]]++;
     }
-    for (int i=0;i<150;i++) {
+    for (int i=0;i<256;i++) {
         if (freqData[i]>0) {
             printf("%c occurs %d times\n", i, freqData[i]);
         }

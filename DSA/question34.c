@@ -34,12 +34,13 @@ int dequeue() {
         return -1;
     }
 
+    int n = queue[front++];
+    printf("%d dequeued from queue.\n", n);
     if (front > rear) {   // queue becomes empty
         front = rear = -1;
     }
-    printf("%d dequeued from queue.\n",queue[front]);
-
-    return queue[front++];
+    
+    return n;
 }
 
 // int noElement() {

@@ -25,13 +25,14 @@ int deque() {
         printf("Queue is empty.\n");
         return -1;
     }
-    printf("%d deleted from queue.\n", queue[front]);
+    int n = queue[front];
+    printf("%d deleted from queue.\n", n);
     if(front == rear) {
         front = rear = -1;
     } else {
         front = (front+1) % size;
     }
-    return queue[front];
+    return n;
 }
 
 void display() {

@@ -10,7 +10,6 @@ struct Node{
 
 struct Node* head = NULL;
 
-
 void insertNodeLast(int value) {
     struct Node* newNode = (struct Node*) malloc(sizeof(struct Node));
     if(newNode == NULL) {

@@ -5,7 +5,6 @@
 
 #define MAX 100
 char stack[MAX];
-// int stack2[MAX];
 int top = -1;
 
 void push(char value) {
@@ -16,14 +15,14 @@ void push(char value) {
         printf("Stack is full.\n");
     }
 }
-int pop() {
+char pop() {
     if(top!=-1) {
         int n = stack[top--];
         return n;
     }
     else{
         printf("Stack is empty.\n");
-        return -1;
+        return '\0';
     }
 }
 

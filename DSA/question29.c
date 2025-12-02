@@ -17,13 +17,14 @@ void reverse(char *str, int n) {
 }
 
 int main(){
-    char s[20];
+    char s[25];
     printf("Enter a string: ");
-    scanf("%s",s);
+    fgets(s, sizeof(s), stdin);
+    s[strcspn(s, "\n")] = '\0'; // Remove newline character
     int n = strlen(s);
-    printf("%s\n",s);
+    printf("Before reverse : %s\n",s);
     reverse(s, n);
-    printf("%s\n",s);
+    printf("After reverse : %s\n",s);
 
     return 0;
 }

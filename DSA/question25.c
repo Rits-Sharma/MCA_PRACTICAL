@@ -130,12 +130,12 @@ int main() {
             displayNode();
             break;
         case 2:
-            printf("\nEnter value of node : ");
+            printf("\nEnter value of node at first: ");
             scanf("%d", &value);
             insertNodeFirst(value);
             break;
         case 3:
-            printf("\nEnter value of node : ");
+            printf("\nEnter value of node at last: ");
             scanf("%d", &value);
             insertNodeLast(value);
             break;

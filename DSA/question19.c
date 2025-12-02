@@ -54,7 +54,7 @@ int main(){
 // 6.Resizes the array using realloc to add 2 more students, then takes their names and prints the updated list.
     int new_size = size + 2;
     char **temp = (char **)realloc(names, new_size * sizeof(char *));
-    if (names == NULL) {  //Checks if allocation failed (e.g., due to low memory);
+    if (temp == NULL) {  //Checks if allocation failed (e.g., due to low memory);
         printf("Memory allocation failed!\n");
         return 1;
     }

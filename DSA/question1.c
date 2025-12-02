@@ -3,7 +3,7 @@
 #include<stdio.h>
 
 int main(){
-    char name[20], mobile[11], course[15], department[20];
+    char name[20], mobile[10], course[15], department[20];
     printf("Enter your name : ");
     gets(name);
     printf("Enter your mobile no. : ");
