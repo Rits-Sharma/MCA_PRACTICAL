@@ -1,3 +1,5 @@
+// In the class Vehicle with a method move(), create a subclass Car that overrides move().Use super.move() to call the superclass version inside the overridden method.
+
 class Vehicle{
     void move(){
         System.out.println("Vehicle runs");

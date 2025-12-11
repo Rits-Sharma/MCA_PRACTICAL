@@ -3,6 +3,7 @@
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 class DataProcessingException extends Exception {
     public DataProcessingException(String message, Throwable cause) {
@@ -13,9 +14,10 @@ class DataProcessingException extends Exception {
 public class Question9 {
 
     public static void processFile(String fileName) throws DataProcessingException {
+        FileInputStream fis = null;
         try {
             // This will throw FileNotFoundException if file does not exist
-            FileInputStream fis = new FileInputStream(fileName);
+            fis = new FileInputStream(fileName);
 
         } catch (FileNotFoundException fnf) {
             System.out.println("Caught FileNotFoundException in processFile().");
@@ -23,6 +25,15 @@ public class Question9 {
 
             // Throw custom exception with original cause
             throw new DataProcessingException("Error processing the file: " + fileName, fnf);
+        } finally {
+            if (fis != null) {
+                try {
+                    fis.close();
+                    System.out.println("FileInputStream closed successfully.");
+                } catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
         }
     }
 

@@ -1,4 +1,4 @@
-// package assignment;
+// Write a class Student with fields name and age. Create a constructor that uses the this keyword to distinguish between instance variables and parameters.
 
 class Student{
     // Fields (instance variables)

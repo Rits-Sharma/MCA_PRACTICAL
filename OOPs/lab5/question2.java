@@ -1,6 +1,4 @@
-/*
- * 2. Create a class Employee with fields name, id, designation, and salary. Implement multiple constructors that initialize different combinations of these fields, and ensure that they chain to a primary constructor using the this() keyword.
- */
+// 2. Create a class Employee with fields name, id, designation, and salary. Implement multiple constructors that initialize different combinations of these fields, and ensure that they chain to a primary constructor using the this() keyword.
 
 class Employee{
     String name;

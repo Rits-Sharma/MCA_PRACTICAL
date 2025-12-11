@@ -1,3 +1,5 @@
+// Implement a Human class with two constructors. Create a Student class that calls both the Human constructors in different ways using super().
+
 class Human{
     String name;
     public Human() {
@@ -18,14 +20,12 @@ class Student extends Human{
     int roll;
 
     public Student(){
-        super();
-        // System.out.println("Default constructor of Student called");
+        super(); // System.out.println("Default constructor of Student called");
     }
 
     public Student(String name, int roll){
         super(name);
-        this.roll = roll;
-        // System.out.println("Parameterized constructor of Student called");
+        this.roll = roll; // System.out.println("Parameterized constructor of Student called");
     }
 
     public void displayStudentInfo() {

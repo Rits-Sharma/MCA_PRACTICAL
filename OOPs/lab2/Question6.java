@@ -20,16 +20,13 @@ class Product {
 
     // Static method to calculate final price
     static float calculate(int basePrice) {
-        return basePrice 
-               + (basePrice * VAT / 100f)
-               - (basePrice * discount / 100f);
+        return basePrice + (basePrice * VAT / 100f) - (basePrice * discount / 100f);
     }
 
     void display() {
         System.out.println("Final Price: " + calculate(basePrice));
     }
 }
-
 
 public class Question6 {
     public static void main(String[] args) {

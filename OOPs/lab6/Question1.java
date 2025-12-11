@@ -13,7 +13,6 @@ public class Question1 {
             a = sc.nextInt();
             b = sc.nextInt();
             System.out.println(a + " is divided by " + b + " then " + (a / b));
-            
         } catch (ArithmeticException e) {
             System.out.println("Can't " + e.getMessage());
         } catch (InputMismatchException e) {

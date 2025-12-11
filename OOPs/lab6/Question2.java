@@ -9,9 +9,7 @@ class InvalidAgeException extends Exception {
     };
 }
 
-
 public class Question2{
-    
     public static int getAge(Scanner sc) throws InvalidAgeException {
         int age;  
         System.out.print("Enter your age: ");
@@ -21,10 +19,8 @@ public class Question2{
         }
         return age;
     }
-    
     public static void main(String[] args) throws InvalidAgeException{
         Scanner sc = new Scanner(System.in); 
-
         try {
             int age = getAge(sc);
             System.out.println("Your age is: " + age);

@@ -1,6 +1,4 @@
-/*
- * 1. Write a Java class Student that has multiple constructors. One constructor should accept student name and ID, while another should accept student name, ID, and grade. Implement constructor overloading and ensure the constructors call each other using this().
- */
+// 1. Write a Java class Student that has multiple constructors. One constructor should accept student name and ID, while another should accept student name, ID, and grade. Implement constructor overloading and ensure the constructors call each other using this().
 
 class Student{
     String name;
@@ -11,9 +9,9 @@ class Student{
         this(name, ID,'A');
     }
     Student(String name, int ID, char grade){
-        this.grade = grade;
         this.name = name;
         this.ID = ID;
+        this.grade = grade;
     }
 
     void display(){

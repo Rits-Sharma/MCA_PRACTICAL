@@ -1,3 +1,5 @@
+// Write a class Chain where methods step1(), step2(), and step3() return this to allow method chaining.
+
 class Chain {
     public Chain step1() {
         System.out.println("Step 1");

@@ -25,8 +25,6 @@ class AccountLockedException extends Exception {
     }
 }
 
-
-
 class BankAccount {
     int balance = 1000;
     static Scanner sc = new Scanner(System.in);
@@ -89,11 +87,12 @@ public class Question10 {
                     }
                     break;
                 case 0:
+                    sc.close();
                     return;
 
                 default:
                     break;
-            }
+            } sc.close();
         }
     }
 }

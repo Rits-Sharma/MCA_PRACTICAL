@@ -1,6 +1,4 @@
-/*
- * 4. Implement a singleton class DatabaseConnection using a private constructor. Ensure that the class restricts object creation to only one instance and provides a global access point using a static method.
- */
+// 4. Implement a singleton class DatabaseConnection using a private constructor. Ensure that the class restricts object creation to only one instance and provides a global access point using a static method.
 
 class DatabaseConnection{
     private static DatabaseConnection dbConnection = null;

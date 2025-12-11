@@ -1,13 +1,12 @@
-// package assignment;
+// Write a class Person with a constructor that accepts name and age. Create a subclass Employee that accepts name, age, and salary, and use super() to initialize the name and age.
 
 class Person{
     private String name;
     private int age;
 
     public Person(String name, int age){
-        // this.name = name;
-        this.age = age;
         this.name = name;
+        this.age = age;
     }
 
     public void setName(String name) {

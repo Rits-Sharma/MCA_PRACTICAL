@@ -1,3 +1,5 @@
+// Create a class Building with overloaded constructors. Then create a class House that extends Building, and use super() to call different constructors from the superclass based on input parameters.
+
 class Building {
     protected String address;
     protected int squareFootage;

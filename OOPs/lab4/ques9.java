@@ -1,3 +1,5 @@
+// Create a class with an inner class and use this to refer to the outer class’s instance variables or methods.
+
 class Outer{
 
     private String message = "This is outer class";

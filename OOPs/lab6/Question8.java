@@ -16,8 +16,6 @@ public class Question8 {
                 System.out.println("Enter number as divisor:");
                 m = sc.next();
                 m1 = Integer.parseInt(m);
-
-
                 q = n1/m1;
                 System.out.println(q);
             } catch (ArithmeticException e) {
