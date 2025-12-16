@@ -9,7 +9,7 @@ class Building {
     public Building(String address) {
         this.address = address;
         this.squareFootage = 1000; // Default square footage
-        this.floors = 1;           // Default number of floors
+        this.floors = 1;          // Default number of floors
     }
 
     // Constructor 2: Address and square footage

@@ -1,6 +1,5 @@
 // Q23: Write a C program to create a singly linked list dynamically from user input and perform deletion of a given node.
 
-
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -29,7 +28,6 @@ void insertNodeLast(int value) {
         }
         temp->next = newNode;
     }
-
     printf("%d insserted at last.\n", value);
 }
 
@@ -68,7 +66,7 @@ void deleteNode(int value) {
     if (f) {
         if(prev == NULL) {
             head = temp->next;
-        } 
+        }
         else {
             prev->next = temp->next;
         }

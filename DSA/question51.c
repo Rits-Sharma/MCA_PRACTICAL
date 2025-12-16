@@ -1,4 +1,4 @@
-//  Q49. Bubble sort (Count comparison)
+//  Q51. Write a program to count the number of swaps and comparisons made during Bubble Sort.
 
 #include<stdio.h>
 

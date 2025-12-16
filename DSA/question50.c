@@ -1,4 +1,4 @@
-//  Q49. Bubble sort (ascending order)
+//  Q50. Write a program to sort elements in ascending and descending order using Bubble Sort.
 
 #include<stdio.h>
 

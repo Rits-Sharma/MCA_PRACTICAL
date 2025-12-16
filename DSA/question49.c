@@ -1,4 +1,4 @@
-//  Q49. Bubble sort (ascending order)
+//  Q49. Write a program to sort an array of integers using Bubble Sort.
 
 #include<stdio.h>
 

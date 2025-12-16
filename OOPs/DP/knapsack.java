@@ -8,7 +8,6 @@ public class knapsack {
         int pick = val[i] + profit(i + 1, val, wt, capacity - wt[i], dp);
         return dp[i][capacity] = Math.max(pick, skip);
     }
-
     public static void main(String[] args) {
         int[] val = {5,3,9,16};
         int[] wt = {1,2,8,10};

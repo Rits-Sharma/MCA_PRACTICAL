@@ -4,7 +4,7 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#define MAX 25
+#define MAX 50
 
 int stack[MAX];
 int top = -1;
@@ -28,7 +28,7 @@ void push(int value) {
 
 int pop() {
     if (isEmpty()) {
-        printf("Stack underflow!\n");
+        printf("Wrong expression is given!\n");
         exit(1);
     } else {
         return stack[top--];

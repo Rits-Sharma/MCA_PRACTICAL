@@ -30,7 +30,7 @@ class Employee extends Person{
     private double salary;
 
     public Employee(String name, int age, double salary) {
-        super(name, age);
+        super(name, age);       // this is super class which call the constructor of parent class and send data to parent class
         this.salary = salary;
     }
     public void displayInfo() {

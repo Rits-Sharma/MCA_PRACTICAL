@@ -9,12 +9,10 @@ class Animal{
 class Dog extends Animal{
     @Override   
     void makeSound(){
-        super.makeSound();
+        super.makeSound();   // it will call the Parent class i.e. Animal named and print the parent method
         System.out.println("Bark");
     }
 }
-
-
 
 public class ques4 {
     public static void main(String[] args) {

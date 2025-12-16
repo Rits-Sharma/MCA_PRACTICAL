@@ -47,13 +47,11 @@ int count() {
     int count = 0;
     if(isEmpty()) {
         printf("Queue is empty.\n");
-        printf("No. of elements: %d.\n", count);
         return 0;
     }
     for (int i = front; i <= rear; i++) {
         count++;
     }
-    printf("No. of elements: %d.\n", count);
     return count;
 }
 
@@ -97,7 +95,7 @@ int main(){
                 break;
 
             case 4:
-                count();
+                printf("No. of elements: %d.\n", count());
                 break;
 
             case 0:

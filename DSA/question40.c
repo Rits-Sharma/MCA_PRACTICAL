@@ -40,30 +40,21 @@ struct Node* insertNode(struct Node* root, int value) {
 }
 
 void preOrder(struct Node* root) {
-    if(root == NULL) {
-        printf("Tree is empty.\n");
-        return;
-    }
+    if(root == NULL) return;
     printf("%d ", root->data);
     preOrder(root->left);
     preOrder(root->right);
 }
 
 void inOrder(struct Node* root) {
-    if(root == NULL) {
-        printf("Tree is empty.\n");
-        return;
-    }
+    if(root == NULL) return;
     inOrder(root->left);
     printf("%d ", root->data);
     inOrder(root->right);
 }
 
 void postOrder(struct Node* root) {
-    if(root == NULL) {
-        printf("Tree is empty.\n");
-        return;
-    }
+    if(root == NULL) return;
     postOrder(root->left);
     postOrder(root->right);
     printf("%d ", root->data);
@@ -73,6 +64,18 @@ int countNodes(struct Node* root) {
     if (root == NULL)
     return 0;
     return 1 + countNodes(root->left) + countNodes(root->right);
+}
+
+struct Node* traverse(struct Node *root, int n) {
+    if(root == NULL) {
+        printf("Tree is empty.\n");
+        return NULL;
+    }
+    if(root->data == n) return root;
+    struct Node* leftResult = traverse(root->left, n);
+    if (leftResult != NULL)
+        return leftResult;
+    return traverse(root->right, n);
 }
 
 int main(){

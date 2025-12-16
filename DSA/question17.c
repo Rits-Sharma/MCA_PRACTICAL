@@ -25,7 +25,7 @@ int main(){
             secLar = n[i];
         }
     }
-    if(secLar == INT_MIN) printf("There is no largest");
+    if(secLar == INT_MIN) printf("There is no largest, all are equal to %d", n[0]);
     else printf("Second largest element in inpur numbers: %d",secLar);
     return 0;
 }

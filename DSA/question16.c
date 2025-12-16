@@ -9,10 +9,7 @@ void check(char ch){
         } else{
             printf("%c is consonant",ch);
         }
-        
-    }
-    else
-        printf("Not a character");
+    } else printf("Not a character");
 }
 
 int main(){

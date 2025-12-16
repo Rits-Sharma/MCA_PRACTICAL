@@ -1,6 +1,4 @@
-/*
- * 8. Create two interfaces Flying and Swimming, each with a method void fly() and void swim() respectively. Create a class Duck that implements both interfaces and overrides both methods. Write a test class that demonstrates the Duck's ability to both fly and swim.
- */
+//8. Create two interfaces Flying and Swimming, each with a method void fly() and void swim() respectively. Create a class Duck that implements both interfaces and overrides both methods. Write a test class that demonstrates the Duck's ability to both fly and swim.
 
 interface Flying{
     void fly();

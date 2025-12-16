@@ -51,7 +51,7 @@ int countLeafNodes(struct Node* root) {
     return 0;
 }
 
-int countIntNodes(struct Node* root) {
+int countInternalNodes(struct Node* root) {
     if(root != NULL) {
         if(root->leftChild == NULL && root->rightChild == NULL) {
             return 0;
@@ -63,16 +63,15 @@ int countIntNodes(struct Node* root) {
 }
 
 int countTotalNodes(struct Node* root) {
-    // if(root == NULL) {
-    //     return 0;
-    // }
-    // return 1 + countTotalNodes(root->leftChild) + countTotalNodes(root->rightChild);
-
-    return countLeafNodes(root) + countIntNodes(root);
+    if(root == NULL) return 0;
+    return 1 + countTotalNodes(root->leftChild) + countTotalNodes(root->rightChild);
+//     return countLeafNodes(root) + countIntNodes(root);
 }
 
 int main(){
     root = insertNode(root, 45);
+    root = insertNode(root, 55);
+    root = insertNode(root, 55);
     root = insertNode(root, 55);
     root = insertNode(root, 65);
     root = insertNode(root, 4);

@@ -1,3 +1,5 @@
+//  1. Write a method that takes an integer array as input and returns a new array with the elements in reverse order.
+
 public class Question1 {
     public static void main(String[] args) {
         int[] arr = {12,5,32,5,6};
@@ -9,8 +11,6 @@ public class Question1 {
             arr[j] = temp;
             i++; j--;
         }
-        for (int ele : arr) {
-            System.out.print(ele + " ");
-        }
+        for (int ele : arr) System.out.print(ele + " ");
     }
 }

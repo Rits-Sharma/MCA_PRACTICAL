@@ -20,10 +20,7 @@ void enque(int value) {
         printf("Queue is full.\n");
         return;
     }
-
-    if (front == -1)      // first insertion
-        front = 0;
-
+    if (front == -1) front = 0;     // first insertion
     queue[++rear] = value;
     printf("%d inserted in queue.\n", value);
 }
@@ -33,26 +30,13 @@ int dequeue() {
         printf("Queue is empty. Deletion not performed.\n");
         return -1;
     }
-
     int n = queue[front++];
     printf("%d dequeued from queue.\n", n);
     if (front > rear) {   // queue becomes empty
         front = rear = -1;
     }
-    
     return n;
 }
-
-// int noElement() {
-//     int count = 0;
-//     if(isEmpty()) {
-//         printf("Queue is empty.\n");
-//     }
-//     for (int i = front; i <= rear; i++) {
-//         count++;
-//     }
-//     return count;
-// }
 
 void display() {
     if (isEmpty()) {

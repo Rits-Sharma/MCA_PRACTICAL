@@ -1,6 +1,10 @@
 // Write a class Parent with a method display(), and a subclass Child with a constructor that uses super() to call the parent class constructor. Use both super.display() and this.display() in the child class.
 
 class Parent{
+    Parent() {
+        System.out.println("Parent constructor");
+    }
+
     void display(){
         System.out.println("Parent class");
     }
@@ -8,7 +12,7 @@ class Parent{
 
 class Child extends Parent{
     Child(){
-        super();
+        super();    // this calls parent class constructor
     }
     @Override
     void display(){;

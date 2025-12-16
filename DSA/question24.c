@@ -1,6 +1,5 @@
 // Q24: Write a C program to create a singly linked list dynamically from user input and perform traversal of a given node.
 
-
 #include<stdio.h>
 #include<stdlib.h>
 

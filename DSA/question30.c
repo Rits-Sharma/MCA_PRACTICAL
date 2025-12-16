@@ -1,6 +1,7 @@
 // Q30. Write a program to implement a stack using an array.
 
 #include<stdio.h>
+#include<limits.h>
 
 #define MAX 10
 
@@ -44,7 +45,7 @@ int peek() {
     }
     else {
         printf("Stack is empty.\n");
-        return -1;
+        return INT_MIN;
     }
 }
 

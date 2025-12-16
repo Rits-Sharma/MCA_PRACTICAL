@@ -8,20 +8,19 @@ class rectangle{
         this.height = height;
     }
     public rectangle(int width){
-        this(width,20);
+        this(width,20); // Default height is set to 20 and send it to the constructor which has both parameter that is written above
     }
     public void display(){
         System.out.println("Width: " + width + ", Height: " + height);
     }
 }
 
-
 public class ques2 {
     public static void main(String[] args) {
         rectangle rect1 = new rectangle(10, 30);
         rectangle rect2 = new rectangle(15);
 
-        rect1.display();
         rect2.display();
+        rect1.display();
     }    
 }

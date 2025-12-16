@@ -28,7 +28,6 @@ void insertNodeLast(int value) {
         }
         temp->next = newNode;
     }
-
     printf("%d insserted at last.\n", value);
 }
 
@@ -42,7 +41,7 @@ void displayNode() {
         if(temp->next == NULL){
             printf("%d -> NULL", temp->data);
         } else {
-        printf("%d -> ", temp->data);
+            printf("%d -> ", temp->data);
         }
         temp = temp->next;
     }
@@ -58,8 +57,7 @@ int main() {
         scanf("%d", &value);
         insertNodeLast(value);
     }
-    
-    printf("\nLimked list dispaly : ");
+    printf("\nLinked list dispaly : ");
     displayNode();
 
     return 0;

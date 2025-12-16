@@ -7,16 +7,13 @@ int main(){
     int freqData[256] = {0};
     char str[100];
     printf("Enter a string :");
-    gets(str);
+    fgets(str, 100, stdin);
     int length = strlen(str);
-    for (int i = 0; i < length; i++)
-    {
+    for (int i = 0; i < length; i++) {
         freqData[(int) str[i]]++;
     }
     for (int i=0;i<256;i++) {
-        if (freqData[i]>0) {
-            printf("%c occurs %d times\n", i, freqData[i]);
-        }
+        if (freqData[i]>0) printf("%c occurs %d times\n", i, freqData[i]);
     }
     
     return 0;

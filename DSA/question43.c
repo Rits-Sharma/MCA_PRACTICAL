@@ -7,8 +7,8 @@ struct Node {
     int data;
     struct Node *lChild, *rChild;
 };
-
 struct Node *root = NULL;
+
 struct Node *createNode(int value) {
     struct Node *newNode = (struct Node*) malloc (sizeof(struct Node));
     newNode->data = value;
@@ -23,7 +23,7 @@ struct Node* insertNode(struct Node* root, int value) {
     }
     if(value < root->data) {
         root->lChild = insertNode(root->lChild, value);
-    } 
+    }
     else if(value > root->data) {
         root->rChild = insertNode(root->rChild, value);
     }
@@ -68,8 +68,6 @@ struct Node* min(struct Node* root) {
     return min;
 }
 
-
-
 void preOrder(struct Node* root) {
     if(root == NULL) return;
     printf("%d ", root->data);
@@ -98,15 +96,18 @@ int main(){
     root = insertNode(root, 2);
     root = insertNode(root, 4);
     root = insertNode(root, -9);
-    // preOrder(root);
-    // postOrder(root);
+    printf("PreOrder : ");
+    preOrder(root); printf("\n");
+    printf("InOrder : ");
+    inOrder(root); printf("\n");
+    printf("PostOrder : ");
+    postOrder(root); printf("\n");
     struct Node* result = searchNode(root, 2);
     if (result != NULL)
         printf("Found: %d\n", result->data);
     else
         printf("Not found.\n");
-
-    printf("max = %d\n", min(root)->data);
+    printf("Max = %d, Min = %d", max(root)->data, min(root)->data);
 
     return 0;
 }

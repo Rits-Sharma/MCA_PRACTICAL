@@ -17,8 +17,8 @@ void push(char value) {
 }
 char pop() {
     if(top!=-1) {
-        int n = stack[top--];
-        return n;
+        char c = stack[top--];
+        return c;
     }
     else{
         printf("Stack is empty.\n");
@@ -28,18 +28,18 @@ char pop() {
 
 void reverse(char str[], int n) {
     int i = 0;
-    while (i<n)
-    {
+    while (i<n) {
         push(str[i]);
         i++;
     }
-    while(top!=-1) {
-        printf("%c",pop());
-    }    
+    while(top!=-1) printf("%c",pop());
 }
 
 int main(){
-    char str[MAX] = "Ritesh Sharma";
+    char str[MAX];
+    printf("Enter a string: ");
+    fgets(str, MAX, stdin);
+    str[strcspn(str, "\n")] = '\0';
     int n = strlen(str);
     reverse(str,n);
 

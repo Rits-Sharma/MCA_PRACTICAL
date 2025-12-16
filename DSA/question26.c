@@ -9,7 +9,7 @@ struct Node{
     struct Node* prev;
 };
 
-struct Node* head;
+struct Node* head = NULL;
 
 void insertFirstNode(int value) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
@@ -59,7 +59,7 @@ void displayNode() {
         return;
     }
     struct Node* temp = head;
-    printf("Forward Traversal\n");
+    printf("Forward Traversal: ");
     while (temp != NULL) {
         if(temp->next == NULL){
             printf("%d -> NULL\n",temp->data);
@@ -68,18 +68,16 @@ void displayNode() {
         printf("%d -> ",temp->data);
         temp = temp->next;
     }
-    printf("Backward Traversal\n");
-    do
-    {
-        if (temp!=NULL) {
-            if (temp->prev==NULL) {
-                printf("%d -> NULL\n", temp->data);
-            } else {
-                printf("%d -> ", temp->data);
-            }
+    printf("Backward Traversal: ");
+    while(temp->next != NULL) temp = temp->next;
+    while (temp != NULL) {
+        if(temp->prev == NULL){
+            printf("%d -> NULL\n",temp->data);
+            break;
         }
+        printf("%d -> ",temp->data);
         temp = temp->prev;
-    } while (temp!=NULL);
+    }
     
 }
 
@@ -106,7 +104,6 @@ void deleteNode(int value) {
                 head = temp->next;
                 head->prev = NULL;
             }
-            // free(temp);
         }
         else {
             temp->prev->next = temp->next;
@@ -130,7 +127,7 @@ int main(){
     insertLastNode(4);
     deleteNode(45);
     displayNode();
-    // deleteNode(3);
+    deleteNode(31);
     deleteNode(34);
     
     displayNode();

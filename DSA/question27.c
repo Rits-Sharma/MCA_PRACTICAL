@@ -17,11 +17,9 @@ void insertEnd(int value) {
         printf("Memory not allocated.");
         return;
     }
-
     newNode->data = value;
     newNode->next = NULL;
     newNode->prev = NULL;
-
     if(head == NULL) {
         newNode->next = newNode;
         newNode->prev = newNode;

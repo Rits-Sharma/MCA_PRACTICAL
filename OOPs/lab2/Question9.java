@@ -7,8 +7,8 @@ class OnlineExam {
 
     // Static block to initialize default settings
     static {
-        examDuration = 30;    // default exam duration: 30 seconds
-        updateInterval = 5;   // default update interval: 5 seconds
+        examDuration = 20;    // default exam duration: 30 seconds
+        updateInterval = 10;   // default update interval: 5 seconds
         System.out.println("Static block executed. Default settings initialized.");
     }
 

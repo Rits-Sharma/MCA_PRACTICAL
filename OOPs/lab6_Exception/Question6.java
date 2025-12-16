@@ -8,7 +8,7 @@ import java.io.IOException;
 public class Question6 {
     public static void main(String[] args) {
 
-        String sourceFile = "input1.txt";
+        String sourceFile = "input.txt";
         String destinationFile = "output.txt";
 
         System.out.println("Starting the file copy operation...\n");
@@ -23,9 +23,7 @@ public class Question6 {
             while ((data = fis.read()) != -1) {  // read byte by byte
                 fos.write(data);
             }
-
             System.out.println("\nCopy completed successfully!");
-
         } catch (IOException e) {
             System.out.println("\nAn IOException occurred!");
             System.out.println("Error Message: " + e.getMessage());

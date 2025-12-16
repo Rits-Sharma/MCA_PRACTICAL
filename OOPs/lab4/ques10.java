@@ -33,7 +33,7 @@ class Student extends Human{
         System.out.println("Roll: " + roll);
     }
 }
-
+ 
 public class ques10 {
     public static void main(String[] args) {
         Student s = new Student();

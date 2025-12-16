@@ -13,7 +13,6 @@ class Student {
     }
 }
 
-
 public class Question3 {
     public static void main(String[] args) {
         Student s = new Student();
