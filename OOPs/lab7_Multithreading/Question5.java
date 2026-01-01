@@ -4,7 +4,7 @@
 public class Question5 {
     public static void main(String[] args) {
         Thread userThread = new Thread(() -> {
-            for (int i = 1; i < 21; i++) {
+            for (int i = 1; i <= 20; i++) {
                 System.out.println("User thread: " + i);
                 try {
                     Thread.sleep(100);

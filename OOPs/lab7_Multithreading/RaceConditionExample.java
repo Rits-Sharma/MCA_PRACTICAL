@@ -5,8 +5,7 @@ public class RaceConditionExample {
 
         public void withdraw(int amount) {
             if (balance >= amount) {
-                System.out.println(Thread.currentThread().getName() +
-                                 " is going to withdraw $" + amount);
+                System.out.println(Thread.currentThread().getName() + " is going to withdraw $" + amount);
 
                 // Simulate some processing time
                 try {

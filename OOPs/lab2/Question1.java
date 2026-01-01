@@ -10,7 +10,7 @@ class WebsiteVisitor {
     }
 }
 
-public class Question1 {
+public class L2_Question1 {
     public static void main(String[] args) {
         WebsiteVisitor web1 = new WebsiteVisitor();
         WebsiteVisitor web2 = new WebsiteVisitor();

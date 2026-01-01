@@ -18,19 +18,23 @@ class Duck implements Flying, Swimming{
 }
 
 class test{
-    void swim(Swimming s){
-        s.swim();
+    Duck d;
+    public test(Duck d) {
+        this.d = d;
     }
-    void fly(Flying f){
-        f.fly();
+    void swim(){
+        d.swim();
+    }
+    void fly(){
+        d.fly();
     }
 }
 
 public class question8 {
     public static void main(String[] args) {
         Duck d = new Duck();
-        test t = new test();
-        t.swim(d);
-        t.fly(d);
+        test t = new test(d);
+        t.swim();
+        t.fly();
     }
 }

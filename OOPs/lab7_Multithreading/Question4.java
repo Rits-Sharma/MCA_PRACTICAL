@@ -10,7 +10,14 @@ public class Question4 {
         t1.setPriority(Thread.MIN_PRIORITY);
         t2.setPriority(Thread.MAX_PRIORITY);
         t3.setPriority(Thread.NORM_PRIORITY);
+        t1.setName("Low Priority Thread 1");
+        t2.setName("High Priority Thread 2");
+        t3.setName("Normal Priority Thread 3");
         
+        System.out.println(t1.getName() + " -> Priority: " + t1.getPriority());
+        System.out.println(t2.getName() + " -> Priority: " + t2.getPriority());
+        System.out.println(t3.getName() + " -> Priority: " + t3.getPriority());
+
         t1.start();
         t2.start();
         t3.start();

@@ -2,7 +2,7 @@
 
 public class Question8 {
     public static void main(String[] args) {
-        String str = "hello hi";
+        String str = "amrahS hsetiR";
         char[] ch = str.toCharArray();
         String reversed = new String(reverse(ch));
         System.out.println(reversed);

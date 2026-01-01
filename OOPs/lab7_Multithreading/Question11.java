@@ -29,7 +29,6 @@ class MessageBox {
         System.out.println("Produced: " + message);
         notify();
     }
-
     public synchronized String getMessage() {
         while (!hasMessage) {
             try {
@@ -53,7 +52,7 @@ class Producer implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 10; i++) {
             box.putMessage("Message : " + i);
         }
     }
@@ -68,7 +67,7 @@ class Consumer implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 1; i <= 5; i++) {
+        for (int i = 1; i <= 10; i++) {
             box.getMessage();
         }
     }

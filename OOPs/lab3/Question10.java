@@ -16,7 +16,7 @@ public class Question10 {
 
         for (int i = 0; i < str1.length(); i++) {
             str1data[(int)str1.charAt(i) - 'a'] += 1;
-            str2data[(int)str2.charAt(i) - 'a'] += 1 ;
+            str2data[(int)str2.charAt(i) - 'a'] += 1;
         }
 
         for (int i = 0; i < 26; i++) {
